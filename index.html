@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function zaokragl() {
+        let liczba = document.getElementById("liczba").value;
+        
+        let zaokradleniawDol = Math.floor(liczba);
+        let zaokradleniawGore = Math.ceil(liczba);
+        let zaokradleniadonbl = Math.round(liczba);
+        let zaokradleniatrunc = Math.trunc(liczba);
+
+        document.getElementById("gora").textContent = zaokradleniawDol;
+        document.getElementById("dol").textContent = zaokradleniawGore;
+        document.getElementById("donbl").textContent = zaokradleniadonbl;
+        document.getElementById("wynik").innerHTML= zaokradleniatrunc;
+    }
+    
+    </script>
+    </head>
+    <body>
+
+
+    <div id="main">
+    <input style="height:50px; width:300px;" type="number" id="liczba" placeholder="Wpisz liczbę">
+    <button id="zaokragl" type="submit" onclick="zaokragl()">Zaokrągl</button>
+   
+</div>
+    <section>
+
+
+
+ <div style="margin-right: 40px; font-size: 30px; color: aliceblue; display: flex;"  ><h4>W dół:  </h4> <h4 id="dol" ></h4></div>
+ <div style="margin-right: 40px; font-size: 30px; color: aliceblue;display: flex;" ><h4>W górę:  </h4><h4 id="gora" ></h4></div>
+ <div style="margin-right: 40px; font-size: 30px; color: aliceblue;display: flex;" ><h4>Do najbliższej liczby cał:  </h4><h4 id="donbl" ></h4></div>
+ <div style="margin-right: 40px; font-size: 30px; color: aliceblue;display: flex;" ><h4>Liczba </h4><h4 id="wynik" ></h4></div>
+ 
+
+
+    </section>
+</body>
+</html>
